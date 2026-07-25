@@ -1,0 +1,5 @@
+%syntax-version=1.0.0
+%project=flipr
+%uri=https://github.com/sqitchers/sqitch-intro/
+
+create_student_table 2026-07-26T01:30:00Z mrnyanlinnhtet <mr.nyanlinnhtet13@gmail.com> # Create students table.

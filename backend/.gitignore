@@ -1,0 +1,63 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.py.class
+
+# Virtual environment
+venv/
+.venv/
+env/
+.env/
+ENV/
+
+# ---- FastAPI / Uvicorn ----
+*.log
+logs/
+*.pid
+
+# ---- Environment variables ----
+.env
+.env.*
+
+# ---- Build / cache ----
+build/
+dist/
+*.egg-info/
+*.egg
+*.manifest
+*.spec
+
+# ---- Editor / IDE ----
+.vscode/
+.idea/
+*.swp
+
+# ---- OS Files ----
+.DS_Store
+Thumbs.db
+
+# ---- Docker ----
+docker-data/
+db_data/
+*.tar
+*.bak
+
+# ---- PostgreSQL ----
+*.sql~
+*.dump
+*.backup
+
+# ---- Sqitch ----
+# Sqitch local configuration and logs
+sqitch.log
+# Ignore deploy/verify/revert temporary files
+deploy/*.tmp
+revert/*.tmp
+verify/*.tmp
+
+# ---- Misc ----
+*.pytest_cache/
+.coverage
+htmlcov/
