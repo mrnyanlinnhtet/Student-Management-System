@@ -2,6 +2,8 @@
 
 BEGIN;
 
+CREATE EXTENSION IF NOT EXISTS pgcrypto;
+
 CREATE TABLE IF NOT EXISTS students(
   id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
   name VARCHAR(50) NOT NULL,
