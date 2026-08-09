@@ -2,4 +2,10 @@
 %project=flipr
 %uri=https://github.com/sqitchers/sqitch-intro/
 
-create_student_table 2026-07-26T01:30:00Z mrnyanlinnhtet <mr.nyanlinnhtet13@gmail.com> # Create students table.
+create_attendance_data_table 2026-07-26T01:30:00Z mrnyanlinnhtet <mr.nyanlinnhtet13@gmail.com> # Create attendance data table.
+create_grade_data_table [create_attendance_data_table] 2026-07-27T06:30:00Z mrnyanlinnhtet <mr.nyanlinnhtet13@gmail.com> # Create grade data table.
+create_student_status_table [create_grade_data_table] 2026-07-28T08:30:00Z mrnyanlinnhtet <mr.nyanlinnhtet13@gmail.com> # Create student status table.
+create_classroom_types_table [create_student_status_table] 2026-07-29T01:00:00Z mrnyanlinnhtet <mr.nyanlinnhtet13@gmail.com> # Create classroom types table.
+create_classrooms_table [create_classroom_types_table] 2026-07-29T11:50:00Z mrnyanlinnhtet <mr.nyanlinnhtet13@gmail.com> # Create classrooms table.
+create_students_table [create_classrooms_table] 2026-07-30T03:20:00Z mrnyanlinnhtet <mr.nyanlinnhtet13@gmail.com> # Create students table.
+create_attendances_table [create_students_table] 2026-30-29T05:10:00Z mrnyanlinnhtet <mr.nyanlinnhtet13@gmail.com> # Create attendances table.

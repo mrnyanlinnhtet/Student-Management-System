@@ -1,4 +1,4 @@
--- Verify Student_management: create_attendances_table on pg.
+-- Verify school management: create_attendances_table on pg.
 
 BEGIN;
 
@@ -20,9 +20,10 @@ WHERE table_schema = 'public'
       'name',
       'attendance_date',
       'student_id'
+      'attendance_data_id'
   )
 GROUP BY table_name
-HAVING COUNT(*) = 4;
+HAVING COUNT(*) = 5;
 
 SELECT 1
 FROM information_schema.table_constraints
@@ -35,6 +36,13 @@ FROM information_schema.table_constraints
 WHERE table_schema = 'public'
   AND table_name = 'attendances'
   AND constraint_name = 'fk_student'
+  AND constraint_type = 'FOREIGN KEY';
+
+SELECT 1
+FROM information_schema.table_constraints
+WHERE table_schema = 'public'
+  AND table_name = 'attendances'
+  AND constraint_name = 'fk_attendance_data'
   AND constraint_type = 'FOREIGN KEY';
 
 ROLLBACK;

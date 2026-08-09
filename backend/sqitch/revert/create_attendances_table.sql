@@ -1,4 +1,4 @@
--- Revert student_management: create_attendances_table from pg.
+-- Revert school management: create_attendances_table from pg.
 
 BEGIN;
 
